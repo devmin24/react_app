@@ -5,11 +5,11 @@ const Score = (props) => {
   return (
     <ScoreContainer>
       <Text>
-        <span>르탄이</span> 퀴즈의 <br />
+        <span>{props.name}</span> 퀴즈의 <br />
         대한 내 점수는?
       </Text>
       <MyScore>
-        <span>100</span>점<p>이 정도면 아주 친한 친구에요!</p>
+        <span>100</span>점<p>{props.scoreMsg}</p>
       </MyScore>
       <Button>랭킹보기</Button>
     </ScoreContainer>
@@ -39,8 +39,31 @@ const Text = styled.h1`
   }
 `;
 
-const MyScore = styled.div``;
+const MyScore = styled.div`
+  text-align: center;
+  & span {
+    background-color: #fef5d4;
+    padding: 5px 10px;
+    border-radius: 30px;
+  }
+  font-weight: 600;
+  font-size: 2em;
+  margin: 24px;
 
-const Button = styled.button``;
+  & > p {
+    margin: 24px 0px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+`;
+
+const Button = styled.button`
+  padding: 8px 24px;
+  background-color: #dadafc;
+  border-radius: 30px;
+  margin: 8px;
+  border: 1px solid #dadafc;
+  width: 80vw;
+`;
 
 export default Score;

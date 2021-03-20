@@ -3,13 +3,14 @@ import styled from "styled-components";
 import img from "./르탄이.png";
 
 const Quiz = (props) => {
+  const list = props.list;
   return (
     <QuizContainer>
       <p>
         <span>1번 문제</span>
       </p>
 
-      <Question>문제입니다</Question>
+      <Question>{list[0].question}</Question>
 
       <AnswerZone>
         <Answer>o</Answer>
